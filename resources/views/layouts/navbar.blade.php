@@ -47,44 +47,14 @@
                 </a>
 
 
-                {{-- JENIS PRODUK --}}
-                <li class="nav-item dropdown">
-
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        id="jenisDropdown"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                    >
-                        🏷️ Jenis Produk
-                    </a>
-
-                    <ul
-                        class="dropdown-menu"
-                        aria-labelledby="jenisDropdown"
-                    >
-
-                        {{-- BUKA HALAMAN JENIS PRODUK --}}
-                        <li>
-                            <a
-                                class="dropdown-item"
-                                href="{{ route('jenis-produk.index') }}"
-                            >
-                                🏷️ Kelola Jenis Produk
-                            </a>
-                        </li>
-
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        
-
-                    </ul>
-
-                </li>
+                {{-- JENIS PRODUK --}} 
+<a 
+    href="{{ route('jenis-produk.index') }}" 
+    class="{{ Request::is('jenis-produk*') ? 'active' : '' }}" 
+> 
+    <span class="menu-icon">🏷️</span> 
+    Jenis Produk 
+</a>
 
 
                 {{-- PRODUK --}}
