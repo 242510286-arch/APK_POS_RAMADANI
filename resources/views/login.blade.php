@@ -569,7 +569,7 @@
 
             <h1 class="login-title">
 
-                Login POS
+                Yaya Mart
 
             </h1>
 

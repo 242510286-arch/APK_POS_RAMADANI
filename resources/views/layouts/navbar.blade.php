@@ -47,16 +47,6 @@
                 </a>
 
 
-                {{-- PRODUK --}}
-                <a
-                    href="{{ route('produk.index') }}"
-                    class="{{ Request::is('produk') ? 'active' : '' }}"
-                >
-                    <span class="menu-icon">📦</span>
-                    Produk
-                </a>
-
-
                 {{-- JENIS PRODUK --}}
                 <li class="nav-item dropdown">
 
@@ -96,6 +86,15 @@
 
                 </li>
 
+
+                {{-- PRODUK --}}
+                <a
+                    href="{{ route('produk.index') }}"
+                    class="{{ Request::is('produk') ? 'active' : '' }}"
+                >
+                    <span class="menu-icon">📦</span>
+                    Produk
+                </a>
 
 
                 {{-- PENJUALAN --}}

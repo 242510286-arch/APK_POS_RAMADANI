@@ -5,181 +5,93 @@
 @section('content')
 
 <style>
-    .user-page {
-        min-height: calc(100vh - 70px);
-        background: linear-gradient(135deg, #fff0f5, #fde7ef);
-        padding: 40px 20px;
+    .user-form-page {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 35px 0 50px;
     }
 
-    .user-card {
-        max-width: 850px;
-        margin: auto;
-        background: #fff;
-        border-radius: 24px;
-        padding: 32px;
-        box-shadow: 0 15px 40px rgba(190, 80, 120, 0.12);
-    }
-
-    .user-header {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 30px;
-    }
-
-    .user-icon {
-        width: 50px;
-        height: 50px;
-        background: #df638d;
-        color: white;
+    .user-form-card {
+        background: white;
+        border: 1px solid #f1d7e1;
         border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 22px;
+        padding: 30px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
     }
 
-    .user-header h2 {
-        margin: 0;
-        color: #44303a;
-        font-size: 25px;
+    .user-form-title {
+        color: #17233c;
+        font-size: 28px;
         font-weight: 700;
+        margin-bottom: 25px;
     }
 
-    .user-header p {
-        margin: 3px 0 0;
-        color: #b18a9a;
-        font-size: 13px;
-    }
-
-    .form-group {
-        margin-bottom: 20px;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 8px;
-        color: #624451;
-        font-size: 14px;
+    .form-label {
+        color: #17233c;
         font-weight: 600;
+        margin-bottom: 8px;
     }
 
-    .form-group input,
-    .form-group select {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 12px 14px;
-        border: 1px solid #f0cbd9;
-        border-radius: 11px;
-        background: #fffafd;
-        color: #624451;
-        outline: none;
-        font-size: 14px;
-        transition: 0.2s;
+    .form-control,
+    .form-select {
+        border: 1px solid #ddd;
+        border-radius: 9px;
+        padding: 11px 13px;
     }
 
-    .form-group input:focus,
-    .form-group select:focus {
-        border-color: #df638d;
-        box-shadow: 0 0 0 3px rgba(223, 99, 141, 0.12);
-    }
-
-    .form-group input::placeholder {
-        color: #c9a6b5;
-    }
-
-    .error-message {
-        color: #dc3545;
-        font-size: 12px;
-        margin-top: 5px;
-    }
-
-    .button-area {
-        margin-top: 30px;
-        padding-top: 20px;
-        border-top: 1px solid #f2d7e1;
-        display: flex;
-        gap: 10px;
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #d86d91;
+        box-shadow: 0 0 0 0.15rem rgba(216, 109, 145, 0.15);
     }
 
     .btn-simpan {
-        border: none;
-        background: #df638d;
+        background: #d86d91;
         color: white;
-        padding: 12px 25px;
-        border-radius: 10px;
+        border: none;
+        border-radius: 9px;
+        padding: 10px 20px;
         font-weight: 600;
-        cursor: pointer;
-        transition: 0.2s;
     }
 
     .btn-simpan:hover {
-        background: #d65380;
-    }
-
-    .btn-kembali {
-        text-decoration: none;
-        color: #a55d79;
-        border: 1px solid #efbfd0;
-        padding: 11px 24px;
-        border-radius: 10px;
-        font-weight: 600;
-        background: white;
-        transition: 0.2s;
-    }
-
-    .btn-kembali:hover {
-        background: #fff4f8;
-    }
-
-    @media (max-width: 768px) {
-        .user-card {
-            padding: 22px;
-        }
+        background: #c95d81;
+        color: white;
     }
 </style>
 
-<div class="user-page">
 
-    <div class="user-card">
+<div class="user-form-page">
 
-        {{-- HEADER --}}
-        <div class="user-header">
+    <div class="user-form-card">
 
-            <div class="user-icon">
-                <i class="bi bi-person-plus-fill"></i>
-            </div>
-
-            <div>
-                <h2>Tambah User</h2>
-                <p>Tambahkan pengguna baru ke dalam sistem POS</p>
-            </div>
-
-        </div>
+        <h1 class="user-form-title">
+            👤 Tambah User
+        </h1>
 
 
-        {{-- FORM --}}
-        <form action="{{ route('admin.users.store') }}" method="POST">
+        <form action="{{ route('admin.users.store') }}"
+              method="POST">
 
             @csrf
 
-            {{-- NAMA --}}
-            <div class="form-group">
 
-                <label>
-                    <i class="bi bi-person"></i>
-                    Nama
+            {{-- NAMA --}}
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Nama User
                 </label>
 
-                <input
-                    type="text"
-                    name="name"
-                    value="{{ old('name') }}"
-                    placeholder="Masukkan nama user"
-                >
+                <input type="text"
+                       name="name"
+                       class="form-control @error('name') is-invalid @enderror"
+                       value="{{ old('name') }}"
+                       placeholder="Masukkan nama user"
+                       required>
 
                 @error('name')
-                    <div class="error-message">
+                    <div class="invalid-feedback">
                         {{ $message }}
                     </div>
                 @enderror
@@ -188,22 +100,21 @@
 
 
             {{-- EMAIL --}}
-            <div class="form-group">
+            <div class="mb-3">
 
-                <label>
-                    <i class="bi bi-envelope"></i>
+                <label class="form-label">
                     Email
                 </label>
 
-                <input
-                    type="email"
-                    name="email"
-                    value="{{ old('email') }}"
-                    placeholder="Masukkan email"
-                >
+                <input type="email"
+                       name="email"
+                       class="form-control @error('email') is-invalid @enderror"
+                       value="{{ old('email') }}"
+                       placeholder="Masukkan email"
+                       required>
 
                 @error('email')
-                    <div class="error-message">
+                    <div class="invalid-feedback">
                         {{ $message }}
                     </div>
                 @enderror
@@ -212,21 +123,20 @@
 
 
             {{-- PASSWORD --}}
-            <div class="form-group">
+            <div class="mb-3">
 
-                <label>
-                    <i class="bi bi-lock"></i>
+                <label class="form-label">
                     Password
                 </label>
 
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Masukkan password"
-                >
+                <input type="password"
+                       name="password"
+                       class="form-control @error('password') is-invalid @enderror"
+                       placeholder="Masukkan password"
+                       required>
 
                 @error('password')
-                    <div class="error-message">
+                    <div class="invalid-feedback">
                         {{ $message }}
                     </div>
                 @enderror
@@ -235,24 +145,27 @@
 
 
             {{-- ROLE --}}
-            <div class="form-group">
+            <div class="mb-4">
 
-                <label>
-                    <i class="bi bi-person-badge"></i>
+                <label class="form-label">
                     Role
                 </label>
 
-                <select name="role_id">
+                <select name="role_id"
+                        class="form-select @error('role_id') is-invalid @enderror"
+                        required>
 
-                    <option value="">-- Pilih Role --</option>
+                    <option value="">
+                        -- Pilih Role --
+                    </option>
 
                     @foreach($roles as $role)
 
-                        <option
-                            value="{{ $role->id }}"
-                            {{ old('role_id') == $role->id ? 'selected' : '' }}
-                        >
-                            {{ ucfirst($role->name) }}
+                        <option value="{{ $role->id }}"
+                            {{ old('role_id') == $role->id ? 'selected' : '' }}>
+
+                            {{ $role->name }}
+
                         </option>
 
                     @endforeach
@@ -260,7 +173,7 @@
                 </select>
 
                 @error('role_id')
-                    <div class="error-message">
+                    <div class="invalid-feedback">
                         {{ $message }}
                     </div>
                 @enderror
@@ -268,21 +181,20 @@
             </div>
 
 
-            {{-- BUTTON --}}
-            <div class="button-area">
+            {{-- TOMBOL --}}
+            <a href="{{ route('admin.users') }}"
+               class="btn btn-secondary">
 
-                <button type="submit" class="btn-simpan">
-                    <i class="bi bi-save"></i>
-                    Simpan
-                </button>
+                Kembali
 
-                {{-- Pakai URL langsung agar tidak error RouteNotFound --}}
-                <a href="{{ url('/admin/users') }}" class="btn-kembali">
-                    <i class="bi bi-arrow-left"></i>
-                    Kembali
-                </a>
+            </a>
 
-            </div>
+            <button type="submit"
+                    class="btn btn-simpan">
+
+                Simpan User
+
+            </button>
 
         </form>
 

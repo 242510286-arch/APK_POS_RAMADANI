@@ -7,48 +7,71 @@ use App\Http\Requests\User\StoreRequest;
 use App\Http\Requests\User\UpdateRequest;
 use App\Models\Role;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-
+    /**
+     * Menampilkan daftar user
+     */
     public function index(SearchRequest $request)
     {
         $keyword = $request->input('search');
 
-        if($keyword) {
-            $users = User::whereRaw("MATCH(name, email) AGAINST(? IN BOOLEAN MODE)", [$keyword])
+        if ($keyword) {
+
+            $users = User::whereRaw(
+                "MATCH(name, email) AGAINST(? IN BOOLEAN MODE)",
+                [$keyword]
+            )
             ->paginate(10)
             ->withQueryString();
+
         } else {
-            $users = User::query()->paginate(10)->withQueryString();
+
+            $users = User::query()
+                ->paginate(10)
+                ->withQueryString();
         }
 
         return view('users.index', compact('users'));
     }
-   
-    public function create ()
+
+
+    /**
+     * Form tambah user
+     */
+    public function create()
     {
         $roles = Role::all();
-    
+
         return view('users.create', compact('roles'));
     }
 
-    public function store(Request $request)
+
+    /**
+     * Simpan user
+     */
+    public function store(StoreRequest $request)
     {
-        $dataReq = $request->all();
+        $data = $request->validated();
 
-        $data['name'] = $dataReq['name'];
-        $data['email'] = $dataReq['email'];
-        $data['password'] = Hash::make($dataReq['password']); 
-        $data['role_id'] = $dataReq['role_id'];
+        User::create([
+            'name'     => $data['name'],
+            'email'    => $data['email'],
+            'password' => Hash::make($data['password']),
+            'role_id'  => $data['role_id'],
+        ]);
 
-        User::create($data);
-
-        return redirect()->route('admin.users')->with('success', 'User berhasil dibuat');
+        return redirect()
+            ->route('admin.users')
+            ->with('success', 'User berhasil dibuat');
     }
 
+
+    /**
+     * Form edit user
+     */
     public function edit(User $user)
     {
         $roles = Role::all();
@@ -56,27 +79,39 @@ class UserController extends Controller
         return view('users.edit', compact('user', 'roles'));
     }
 
+
+    /**
+     * Update user
+     */
     public function update(UpdateRequest $request, User $user)
     {
-        $dataReq = $request->validated();
+        $data = $request->validated();
 
-        $user->name    = $dataReq['name'];
-        $user->email   = $dataReq['email'];
-        $user->role_id = $dataReq['role_id'];
+        $user->name = $data['name'];
+        $user->email = $data['email'];
+        $user->role_id = $data['role_id'];
 
-        if (!empty($dataReq['password'])) {
-            $user->password = Hash::make($dataReq['password']);
+        if (!empty($data['password'])) {
+            $user->password = Hash::make($data['password']);
         }
 
         $user->save();
 
-        return redirect()->route('admin.users.edit', $user->id)->with('success', 'User updated');
+        return redirect()
+            ->route('admin.users')
+            ->with('success', 'User berhasil diperbarui');
     }
 
+
+    /**
+     * Hapus user
+     */
     public function destroy(User $user)
     {
         $user->delete();
 
-        return back()->with('success', 'User deleted');
+        return redirect()
+            ->route('admin.users')
+            ->with('success', 'User berhasil dihapus');
     }
 }

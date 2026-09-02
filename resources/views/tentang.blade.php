@@ -65,6 +65,20 @@
                 </div>
 
 
+                {{-- JENIS KELAMIN --}}
+                <div class="identitas-row">
+
+                    <div class="label">
+                       Jenis Kelamin
+                    </div>
+
+                    <div class="value">
+                        Perempuan
+                    </div>
+
+                </div>
+
+
                 {{-- KELAS --}}
                 <div class="identitas-row">
 
@@ -102,6 +116,20 @@
 
                     <div class="value">
                         SMKN4 TASIKMALAYA
+                    </div>
+
+                </div>
+
+
+                {{-- TEMPAT TANGGAL LAHIR --}}
+                <div class="identitas-row">
+
+                    <div class="label">
+                       Tempat Tanggal Lahir
+                    </div>
+
+                    <div class="value">
+                        Tasikmalaya, 07 September 2008
                     </div>
 
                 </div>
