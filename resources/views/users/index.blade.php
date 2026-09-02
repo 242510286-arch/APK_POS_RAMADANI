@@ -4,6 +4,8 @@
 
 @section('content')
 
+@include('layouts.navbar')
+
 <style>
     .user-page {
         max-width: 1160px;

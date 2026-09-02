@@ -6,6 +6,7 @@
 
 @include('layouts.navbar')
 
+
 <style>
     /* ========================================
        SOFT PINK DASHBOARD

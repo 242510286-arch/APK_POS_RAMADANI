@@ -4,6 +4,8 @@
 
 @section('content')
 
+@include('layouts.navbar')
+
 <div class="identitas-wrapper">
 
     <div class="identitas-card">

@@ -4,6 +4,8 @@
 
 @section('content')
 
+@include('layouts.navbar')
+
 <style>
     .produk-page {
         max-width: 1160px;
