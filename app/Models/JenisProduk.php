@@ -13,5 +13,7 @@ class JenisProduk extends Model
 
     protected $fillable = [
         'nama_jenis',
+        'created_by_name',
+        'created_by_email',
     ];
 }
