@@ -38,9 +38,10 @@ class ProdukController extends Controller
     {
         $this->authorize('create', Produk::class);
 
-        $jenis = JenisProduk::all();
+        // Mengambil semua jenis produk
+        $jenisProduks = JenisProduk::all();
 
-        return view('produk.create', compact('jenis'));
+        return view('produk.create', compact('jenisProduks'));
     }
 
 

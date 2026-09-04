@@ -599,86 +599,47 @@
                     </div>
 
 
-                    {{-- NAMA PRODUK --}}
-
-                    <div class="mb-3">
-
-                        <label
-                            for="nama_produk"
-                            class="form-label"
-                        >
-
-                            <i
-                                class="fa-solid fa-tag me-1"
+                    {{-- JENIS PRODUK --}}
+<div class="form-group">
+    <label for="jenis_id">
+        <i
+                                class="fa-solid fa-tags me-1"
                                 style="color:#d77b99;"
                             ></i>
-
-                            Nama Produk
-
-                        </label>
-
-
-                        <input
-                            type="text"
-                            name="nama_produk"
-                            id="nama_produk"
-                            class="form-control"
-                            placeholder="Masukkan nama produk"
-                            value="{{ old('nama_produk') }}"
-                            required
-                        >
-
-                    </div>
-
-
-                    {{-- JENIS PRODUK --}}
-
-<div class="mb-3">
-
-    <label
-        for="jenis_id"
-        class="form-label"
-    >
-
-        <i
-            class="fa-solid fa-tags me-1"
-            style="color:#d77b99;"
-        ></i>
-
         Jenis Produk
-
     </label>
 
-    <select
-        name="jenis_id"
-        id="jenis_id"
-        class="form-select"
-        required
-    >
+    <select name="jenis_id" id="jenis_id" class="form-control">
+        <option value="">Pilih jenis produk</option>
 
-        <option value="">
-            Pilih jenis produk
-        </option>
-
-        @foreach ($jenis as $item)
-
-            <option
-                value="{{ $item->id }}"
-                {{ old('jenis_id') == $item->id ? 'selected' : '' }}
-            >
-                {{ $item->nama_jenis }}
+        @foreach($jenisProduks as $jenis)
+            <option value="{{ $jenis->id }}"
+                {{ old('jenis_id') == $jenis->id ? 'selected' : '' }}>
+                {{ $jenis->nama_jenis }}
             </option>
-
         @endforeach
-
     </select>
+</div>
 
-    @error('jenis_id')
-        <small class="text-danger">
-            {{ $message }}
-        </small>
-    @enderror
 
+{{-- NAMA PRODUK --}}
+<div class="form-group">
+    <label for="nama_produk">
+        <i
+                                class="fa-solid fa-tags me-1"
+                                style="color:#d77b99;"
+                            ></i>
+        Nama Produk
+    </label>
+
+    <input
+        type="text"
+        name="nama_produk"
+        id="nama_produk"
+        class="form-control"
+        value="{{ old('nama_produk') }}"
+        placeholder="Masukkan nama produk"
+    >
 </div>
 
 

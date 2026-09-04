@@ -599,95 +599,47 @@
 
 
                     
-
-                    <div class="mb-3">
-
-                        <label
-                            for="nama_produk"
-                            class="form-label"
-                        >
-
-                            <i
-                                class="fa-solid fa-tag me-1"
+<div class="form-group">
+    <label for="jenis_id">
+        <i
+                                class="fa-solid fa-tags me-1"
                                 style="color:#d77b99;"
                             ></i>
-
-                            Nama Produk
-
-                        </label>
-
-
-                        <input
-                            type="text"
-                            name="nama_produk"
-                            id="nama_produk"
-                            class="form-control"
-                            placeholder="Masukkan nama produk"
-                            value="<?php echo e(old('nama_produk')); ?>"
-                            required
-                        >
-
-                    </div>
-
-
-                    
-
-<div class="mb-3">
-
-    <label
-        for="jenis_id"
-        class="form-label"
-    >
-
-        <i
-            class="fa-solid fa-tags me-1"
-            style="color:#d77b99;"
-        ></i>
-
         Jenis Produk
-
     </label>
 
-    <select
-        name="jenis_id"
-        id="jenis_id"
-        class="form-select"
-        required
-    >
+    <select name="jenis_id" id="jenis_id" class="form-control">
+        <option value="">Pilih jenis produk</option>
 
-        <option value="">
-            Pilih jenis produk
-        </option>
-
-        <?php $__currentLoopData = $jenis; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-
-            <option
-                value="<?php echo e($item->id); ?>"
-                <?php echo e(old('jenis_id') == $item->id ? 'selected' : ''); ?>
-
-            >
-                <?php echo e($item->nama_jenis); ?>
+        <?php $__currentLoopData = $jenisProduks; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $jenis): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <option value="<?php echo e($jenis->id); ?>"
+                <?php echo e(old('jenis_id') == $jenis->id ? 'selected' : ''); ?>>
+                <?php echo e($jenis->nama_jenis); ?>
 
             </option>
-
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-
     </select>
+</div>
 
-    <?php $__errorArgs = ['jenis_id'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?>
-        <small class="text-danger">
-            <?php echo e($message); ?>
 
-        </small>
-    <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
 
+<div class="form-group">
+    <label for="nama_produk">
+        <i
+                                class="fa-solid fa-tags me-1"
+                                style="color:#d77b99;"
+                            ></i>
+        Nama Produk
+    </label>
+
+    <input
+        type="text"
+        name="nama_produk"
+        id="nama_produk"
+        class="form-control"
+        value="<?php echo e(old('nama_produk')); ?>"
+        placeholder="Masukkan nama produk"
+    >
 </div>
 
 
