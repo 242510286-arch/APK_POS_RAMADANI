@@ -312,7 +312,7 @@
         <div>
 
             <h1 class="produk-title">
-                <span class="produk-title-icon">📦</span>
+                <span class="produk-title-icon"></span>
                 Halaman Produk
             </h1>
 

@@ -16,9 +16,7 @@
 
             <div class="identitas-header">
 
-                <div class="identitas-icon">
-                    👤
-                </div>
+                
 
                 <div>
                     <h1>Identitas Diri</h1>

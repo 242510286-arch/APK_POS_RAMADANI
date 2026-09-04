@@ -26,7 +26,7 @@
                     href="<?php echo e(route('dashboard')); ?>"
                     class="<?php echo e(Request::is('dashboard') ? 'active' : ''); ?>"
                 >
-                    <span class="menu-icon">🏠</span>
+                    <span class="menu-icon"></span>
                     Dashboard
                 </a>
 
@@ -36,7 +36,7 @@
                     href="<?php echo e(route('admin.users')); ?>"
                     class="<?php echo e(Request::is('admin/users') ? 'active' : ''); ?>"
                 >
-                    <span class="menu-icon">👤</span>
+                    <span class="menu-icon"></span>
                     Users
                 </a>
 
@@ -46,7 +46,7 @@
     href="<?php echo e(route('jenis-produk.index')); ?>" 
     class="<?php echo e(Request::is('jenis-produk*') ? 'active' : ''); ?>" 
 > 
-    <span class="menu-icon">🏷️</span> 
+    <span class="menu-icon"></span> 
     Jenis Produk 
 </a>
 
@@ -56,7 +56,7 @@
                     href="<?php echo e(route('produk.index')); ?>"
                     class="<?php echo e(Request::is('produk') ? 'active' : ''); ?>"
                 >
-                    <span class="menu-icon">📦</span>
+                    <span class="menu-icon"></span>
                     Produk
                 </a>
 
@@ -66,7 +66,7 @@
                     href="<?php echo e(route('penjualan.index')); ?>"
                     class="<?php echo e(Request::is('penjualan') ? 'active' : ''); ?>"
                 >
-                    <span class="menu-icon">🛒</span>
+                    <span class="menu-icon"></span>
                     Penjualan
                 </a>
 
@@ -76,7 +76,7 @@
                     href="<?php echo e(route('tentang')); ?>"
                     class="<?php echo e(Request::is('tentang') ? 'active' : ''); ?>"
                 >
-                    <span class="menu-icon">ℹ️</span>
+                    <span class="menu-icon"></span>
                     Tentang
                 </a>
 
@@ -97,7 +97,7 @@
                     class="logout-button"
                 >
 
-                    <span>🚪</span>
+                    <span></span>
                     Logout
 
                 </button>

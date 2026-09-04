@@ -288,7 +288,7 @@
         <div>
 
             <h1 class="penjualan-title">
-                🛒 Halaman Penjualan
+                 Halaman Penjualan
             </h1>
 
             <p class="penjualan-subtitle">

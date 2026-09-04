@@ -322,7 +322,7 @@
         <div>
 
             <h1 class="jenis-title">
-                🏷️ Halaman Jenis Produk
+                 Halaman Jenis Produk
             </h1>
 
             <p class="jenis-subtitle">

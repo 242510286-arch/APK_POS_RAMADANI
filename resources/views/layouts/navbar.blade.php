@@ -32,7 +32,7 @@
                     href="{{ route('dashboard') }}"
                     class="{{ Request::is('dashboard') ? 'active' : '' }}"
                 >
-                    <span class="menu-icon">🏠</span>
+                    <span class="menu-icon"></span>
                     Dashboard
                 </a>
 
@@ -42,7 +42,7 @@
                     href="{{ route('admin.users') }}"
                     class="{{ Request::is('admin/users') ? 'active' : '' }}"
                 >
-                    <span class="menu-icon">👤</span>
+                    <span class="menu-icon"></span>
                     Users
                 </a>
 
@@ -52,7 +52,7 @@
     href="{{ route('jenis-produk.index') }}" 
     class="{{ Request::is('jenis-produk*') ? 'active' : '' }}" 
 > 
-    <span class="menu-icon">🏷️</span> 
+    <span class="menu-icon"></span> 
     Jenis Produk 
 </a>
 
@@ -62,7 +62,7 @@
                     href="{{ route('produk.index') }}"
                     class="{{ Request::is('produk') ? 'active' : '' }}"
                 >
-                    <span class="menu-icon">📦</span>
+                    <span class="menu-icon"></span>
                     Produk
                 </a>
 
@@ -72,7 +72,7 @@
                     href="{{ route('penjualan.index') }}"
                     class="{{ Request::is('penjualan') ? 'active' : '' }}"
                 >
-                    <span class="menu-icon">🛒</span>
+                    <span class="menu-icon"></span>
                     Penjualan
                 </a>
 
@@ -82,7 +82,7 @@
                     href="{{ route('tentang') }}"
                     class="{{ Request::is('tentang') ? 'active' : '' }}"
                 >
-                    <span class="menu-icon">ℹ️</span>
+                    <span class="menu-icon"></span>
                     Tentang
                 </a>
 
@@ -105,7 +105,7 @@
                     class="logout-button"
                 >
 
-                    <span>🚪</span>
+                    <span></span>
                     Logout
 
                 </button>
