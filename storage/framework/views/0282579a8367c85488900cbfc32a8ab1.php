@@ -180,14 +180,14 @@
             <div class="aplikasi-info">
 
                 <h3>
-                    💗 Tentang Aplikasi
+                     Tentang 
                 </h3>
 
                 <p>
-                    Aplikasi POS ini dibuat untuk membantu proses
-                    pengelolaan produk, transaksi penjualan, keranjang,
-                    pembayaran, dan monitoring stok secara lebih mudah
-                    dan terorganisir.
+                     Saya memiliki ketertarikan dalam bidang teknologi, khususnya dalam
+                     pembuatan aplikasi dan pengembangan perangkat lunak. 
+                     Halaman ini dibuat sebagai bagian dari identitas diri sekaligus
+                     memperkenalkan saya sebagai pemilik dan pembuat aplikasi.
                 </p>
 
             </div>

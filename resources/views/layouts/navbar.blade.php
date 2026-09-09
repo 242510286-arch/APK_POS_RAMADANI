@@ -48,13 +48,13 @@
 
 
                 {{-- JENIS PRODUK --}} 
-<a 
-    href="{{ route('jenis-produk.index') }}" 
-    class="{{ Request::is('jenis-produk*') ? 'active' : '' }}" 
-> 
-    <span class="menu-icon"></span> 
-    Jenis Produk 
-</a>
+                <a 
+                      href="{{ route('jenis-produk.index') }}" 
+                      class="{{ Request::is('jenis-produk*') ? 'active' : '' }}" 
+                > 
+                      <span class="menu-icon"></span> 
+                      Jenis Produk 
+                </a>
 
 
                 {{-- PRODUK --}}
@@ -83,7 +83,7 @@
                     class="{{ Request::is('tentang') ? 'active' : '' }}"
                 >
                     <span class="menu-icon"></span>
-                    Tentang
+                    Profile
                 </a>
 
             </div>

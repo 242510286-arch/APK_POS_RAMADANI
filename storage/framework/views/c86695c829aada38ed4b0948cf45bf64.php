@@ -42,13 +42,13 @@
 
 
                  
-<a 
-    href="<?php echo e(route('jenis-produk.index')); ?>" 
-    class="<?php echo e(Request::is('jenis-produk*') ? 'active' : ''); ?>" 
-> 
-    <span class="menu-icon"></span> 
-    Jenis Produk 
-</a>
+                <a 
+                      href="<?php echo e(route('jenis-produk.index')); ?>" 
+                      class="<?php echo e(Request::is('jenis-produk*') ? 'active' : ''); ?>" 
+                > 
+                      <span class="menu-icon"></span> 
+                      Jenis Produk 
+                </a>
 
 
                 
@@ -77,7 +77,7 @@
                     class="<?php echo e(Request::is('tentang') ? 'active' : ''); ?>"
                 >
                     <span class="menu-icon"></span>
-                    Tentang
+                    Profile
                 </a>
 
             </div>
