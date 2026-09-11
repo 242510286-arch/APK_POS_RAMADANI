@@ -1,0 +1,198 @@
+﻿Diagnose log at 2026-09-11T08:36:32Z
+
+AppPath: C:\Program Files\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Program Files\Git\mingw64\bin\
+Version: 2.6.1+786ab03440ddc82e807a97c0e540f5247e44cec6
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 26200)
+Reading environment variables... OK
+ Variables:
+HOMEPATH=\Users\rpspp
+DriverData=C:\Windows\System32\Drivers\DriverData
+COMPUTERNAME=LABPPLG4
+GIT_TRACE2_PARENT_SID=903ab257-1bf4-44b2-8be7-c5c9d4bd6f49
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+OneDrive=C:\Users\rpspp\OneDrive
+EFC_15476_2283032206=1
+EFC_15476_4126798990=1
+SESSIONNAME=Console
+TMP=C:\Users\rpspp\AppData\Local\Temp
+EFC_15476_3789132940=1
+PROCESSOR_REVISION=9705
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+GIT_ASKPASS=c:\Users\rpspp\AppData\Roaming\Code\User\globalStorage\vscode.git\askpass\70789581cae28aa7\askpass.sh
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+TEMP=C:\Users\rpspp\AppData\Local\Temp
+LOCALAPPDATA=C:\Users\rpspp\AppData\Local
+MSYSTEM=MINGW64
+TERM=xterm-256color
+COPILOT_DEBUG_NONCE=8018d7b22207a8b65a22eb042e1f5a90
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 151 Stepping 5, GenuineIntel
+VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
+ProgramW6432=C:\Program Files
+USERDOMAIN=LABPPLG4
+ProgramFiles(x86)=C:\Program Files (x86)
+Path=C:/Program Files/Git/mingw64/libexec/git-core;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\rpspp\bin;c:\Users\rpspp\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\rpspp\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\laragon\bin\php\php-8.3.16-Win32-vs16-x64;C:\Program Files\nodejs\;C:\ProgramData\ComposerSetup\bin;C:\Program Files\dotnet\;C:\Users\rpspp\AppData\Local\Microsoft\WindowsApps;C:\Users\rpspp\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\rpspp\AppData\Roaming\Composer\vendor\bin;C:\Users\rpspp\AppData\Roaming\npm;C:\Users\rpspp\.dotnet\tools
+TERM_PROGRAM=vscode
+PROCESSOR_LEVEL=6
+NUMBER_OF_PROCESSORS=12
+TMPDIR=C:\Users\rpspp\AppData\Local\Temp
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+PROMPT=$P$G
+TERM_PROGRAM_VERSION=1.137.0
+VSCODE_GIT_ASKPASS_MAIN=c:\Users\rpspp\AppData\Roaming\Code\User\globalStorage\vscode.git\askpass\70789581cae28aa7\askpass-main.js
+PSModulePath=C:\Users\rpspp\OneDrive\Dokumen\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+VSCODE_GIT_IPC_HANDLE=\\.\pipe\vscode-git-d0da09ba85-sock
+FPS_BROWSER_USER_PROFILE_STRING=Default
+CommonProgramFiles=C:\Program Files (x86)\Common Files
+VSCODE_INJECTION=1
+CHROME_CRASHPAD_PIPE_NAME=\\.\pipe\crashpad_2768_UEFGZFEHHWJIFJWJ
+EFC_15476_2775293581=1
+PLINK_PROTOCOL=ssh
+ProgramData=C:\ProgramData
+HOME=C:\Users\rpspp
+ProgramFiles=C:\Program Files (x86)
+VSCODE_GIT_ASKPASS_NODE=C:\Users\rpspp\AppData\Local\Programs\Microsoft VS Code\Code.exe
+SystemRoot=C:\WINDOWS
+EFC_15476_344590478=1
+CommonProgramW6432=C:\Program Files\Common Files
+LOGONSERVER=\\LABPPLG4
+EFC_15476_1262719628=1
+USERPROFILE=C:\Users\rpspp
+COLORTERM=truecolor
+EFC_15476_1592913036=1
+USERDOMAIN_ROAMINGPROFILE=LABPPLG4
+APPDATA=C:\Users\rpspp\AppData\Roaming
+HOMEDRIVE=C:
+EFC_15476_2946480783=1
+USERNAME=rpspp
+PROCESSOR_ARCHITEW6432=AMD64
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+PROCESSOR_ARCHITECTURE=x86
+OS=Windows_NT
+ComSpec=C:\WINDOWS\system32\cmd.exe
+SystemDrive=C:
+windir=C:\WINDOWS
+LANG=en_US.UTF-8
+ALLUSERSPROFILE=C:\ProgramData
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\rpspp\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\rpspp\AppData\Local\Temp\d5894d3ab075a61dafab108b'... OK
+Reading from temporary file 'C:\Users\rpspp\AppData\Local\Temp\d5894d3ab075a61dafab108b'... OK
+Deleting temporary file 'C:\Users\rpspp\AppData\Local\Temp\d5894d3ab075a61dafab108b'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\rpspp
+UserDataDirectoryPath: C:\Users\rpspp\.gcm
+GetCurrentDirectory(): C:\laragon\www\APK_POS_RAMADANI
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:49352/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.50.1.windows.1'
+Locating current repository...Git repository at 'C:/laragon/www/APK_POS_RAMADANI/.git'
+ OK
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Program Files/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig	http.sslbackend=schannel
+file:C:/Program Files/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig	core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig	core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig	pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig	credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig	init.defaultbranch=master
+file:C:/Users/rpspp/.gitconfig	user.email=aiamarahmawati@gmail.com
+file:C:/Users/rpspp/.gitconfig	user.name=aiamarahmawati
+file:C:/Users/rpspp/.gitconfig	safe.directory=C:/
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.symlinks=false
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/242510286-arch/APK_POS_RAMADANI.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.main.remote=origin
+file:.git/config	branch.main.merge=refs/heads/main
+file:.git/config	branch.main.vscode-merge-base=origin/main
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\rpspp\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\rpspp\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
