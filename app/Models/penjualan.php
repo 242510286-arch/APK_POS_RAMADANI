@@ -10,10 +10,12 @@ class penjualan extends Model
     use HasFactory;
 
     protected $table = 'penjualan';
-    
+
     protected $fillable = [
         'user_id',
         'total_pembayaran',
+        'uang_diterima',
+        'kembalian',
         'metode_pembayaran',
         'status'
     ];

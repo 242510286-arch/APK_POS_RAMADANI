@@ -644,7 +644,7 @@
 
 
 
-                    {{-- HARGA BELI --}}
+                    {{-- HARGA POKOK --}}
 
                     <div class="mb-3">
 
@@ -658,7 +658,7 @@
                                 style="color:#d77b99;"
                             ></i>
 
-                            Harga Beli
+                            Harga Pokok
 
                         </label>
 

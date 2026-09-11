@@ -305,12 +305,12 @@
                     </div>
 
 
-                    {{-- HARGA BELI --}}
+                    {{-- HARGA POKOK --}}
                     <div class="form-group">
 
                         <label>
                             <i class="bi bi-cash"></i>
-                            Harga Beli
+                            Harga Pokok
                         </label>
 
                         <input

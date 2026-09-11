@@ -406,7 +406,7 @@
                         </th>
 
                         <th class="produk-harga">
-                            Harga Beli
+                            Harga Pokok
                         </th>
 
                         <th class="produk-harga">
